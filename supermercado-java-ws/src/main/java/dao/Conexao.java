@@ -17,19 +17,19 @@ public class Conexao {
 		return instance;
 	}
 
-	public Connection getConnection() throws Exception{
-     
-		try{
+	public Connection getConnection() throws Exception {
+
+		try {
 			String driver = "org.postgresql.Driver";
 			String url = "jdbc:postgresql://localhost/mercado";
 			String usr = "postgres";
-            String pswrd = "123456";
+			String pswrd = "123456";
 
 			Class.forName(driver);
 
-            return DriverManager.getConnection(url, usr, pswrd);
-        } catch (Exception e){
-            throw e;
-        }
-    }
+			return DriverManager.getConnection(url, usr, pswrd);
+		} catch (Exception e) {
+			throw e;
+		}
+	}
 }
